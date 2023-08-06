@@ -1,0 +1,128 @@
+@import 'resets', 'variables';
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: $mainFont;
+    @include flexCenter(column, "", "")
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+    @include flexCenter(row, center, center);
+
+    &::before {
+        @include backGround($image-url, 0.5)
+    }
+
+    .form-box {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px lightslategray;
+        position: relative;
+        width: 500px;
+
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .input-box {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            height: 50px;
+
+            input {
+                height: 35px;
+                padding-left: .5rem;
+                width: 100%;
+                letter-spacing: 1px;
+                border-radius: 5px;
+
+                &:invalid {
+                    border: 1px solid $red;
+                }
+
+                &:valid {
+                    border: 1px solid $green;
+                }
+
+                .invalid {
+                    border: 1px solid $red;
+                }
+                
+            }
+
+            select {
+                height: 35px;
+                padding-left: .5rem;
+                width: 100%;
+                letter-spacing: 1px;
+                border-radius: 5px;
+            }
+
+            .warning {
+                color: $red;
+                text-align: right;
+                font-weight: weight(medium);
+                font-size: 13px;
+                opacity: 0;
+                
+            }
+
+            .show {
+                opacity: 1;
+            }
+        }
+
+        button {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: .7rem;
+            font-weight: weight(bold);
+            letter-spacing: 2px;
+            color: whitesmoke;
+            background-color: $green;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px darken($green, 8);
+
+            &:hover {
+                background-color: lighten($green, 10%);
+                cursor: pointer;
+                box-shadow: 3px 3px 3px darken($green, 5);
+            }
+        }
+        
+    }
+
+}
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+    padding: .5rem;
+    
+    .attribution {
+        gap: 5px;
+        @include flexCenter(row, center, center);
+
+        .copy {
+            font-size: 20px;
+        }
+
+        .fa-brands {
+            margin-left: 5px;
+
+            &:hover {
+                color: $green;
+                cursor: pointer;
+            }
+        }
+    
+    }
+
+    
+}

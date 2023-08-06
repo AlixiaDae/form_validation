@@ -1,0 +1,39 @@
+$mainFont: "Poppins", sans-serif;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "bold" : 700
+);
+$green: rgb(63, 180, 63);
+$red: rgb(253, 63, 63);
+$image-url: url('../assets/bg-unsplash.jpg');
+
+@mixin backGround($url, $opacity) {
+    content: "";
+    background-image: $url;
+    opacity: $opacity;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+@mixin flexCenter($direction,$align-name,$justify-name) {
+    display: flex;
+    flex-direction: $direction;
+    @if $align-name != "" {
+        align-items: $align-name;
+    }
+    @if $justify-name != "" {
+        justify-content: $justify-name;
+    }
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name)
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d3d1d74bf.js" crossorigin="anonymous"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <main>
+        <div class="form-box">
+            <h1>Validate me!</h1>
+            <form>
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <div class="warning">Please provide a valid email</div>
+                </div>
+                <div class="input-box">
+                    <select name="country" id="country"></select>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="zipcode" id="zipcode" placeholder="ZIP Code" required>
+                    <div class="warning">Please provide a valid zipcode</div>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" id="password"  placeholder="Password" minlength="8" required>
+                    <div class="warning">Password must be at least 8 characters long</div>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
+                    <div class="warning">Password does not match</div>
+                </div>
+                <button id="submit-button">Validate</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="attribution"><span class="copy">&copy;</span> Lyza Rivera. All rights reserved.<a href="https://github.com/AlixiaDae" target="_blank"><span aria-hidden="true" class="fa-brands fa-square-github fa-xl"></span></a><span class="sr-only">Github</span></div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
